@@ -1,0 +1,9 @@
+package com.jdbc.dao;
+
+import com.jdbc.entity.Student;
+
+public class StudentDao {
+	public static void insert(Student student) {
+		
+	}
+}

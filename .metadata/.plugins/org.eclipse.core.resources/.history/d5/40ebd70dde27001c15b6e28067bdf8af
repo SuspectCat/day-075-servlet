@@ -1,0 +1,28 @@
+package com.jdbc.dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.jdbc.entity.Student;
+import com.jdbc.util.DatabaseTools;
+
+public class StudentDao {
+	public static void insert(Student student) {
+		Connection connection = null;
+		Statement statement = null;
+		
+		connection = DatabaseTools.getConnection();
+		StringBuilder sqlStringBuilder = new StringBuilder();
+		
+		sqlStringBuilder.append("INSERT INTO student VALUE (" + student.getStuId() + ", '" + student.getStuName() + "', '" + student.getStuGender() + "');");
+		
+		statement = DatabaseTools.getStatement(connection);
+		try {
+			statement.execute(sqlStringBuilder.toString());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

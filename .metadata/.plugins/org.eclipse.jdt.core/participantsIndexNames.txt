@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+E:\code\JSP第二阶段\day-075-servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\226003250.index
+\Servlet\src
+E:\code\JSP第二阶段\day-075-servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4179417518.index
+\HTML\src

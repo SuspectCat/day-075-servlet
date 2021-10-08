@@ -1,0 +1,37 @@
+package com.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+//import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.jdbc.dao.StudentDao;
+import com.jdbc.entity.Student;
+
+/*@WebServlet(urlPatterns = {
+	"/load",
+	"/load/*",
+	"*.cn"
+})*/
+public class IndexServlet extends HttpServlet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String parameterId = req.getParameter("id");
+		String parameterName = req.getParameter("name");
+		String parameterGender = req.getParameter("gender");
+		
+		Student student = new Student(Integer.valueOf(parameterId), parameterName, parameterGender);
+		
+		StudentDao.insert(student);
+	}
+}

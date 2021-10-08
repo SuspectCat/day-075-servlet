@@ -1,0 +1,12 @@
+package com.context;
+
+import javax.servlet.http.HttpServlet;
+
+public class DeleteServletContext extends HttpServlet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+}

@@ -1,0 +1,20 @@
+package com.jdbc.dao;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+import com.jdbc.entity.Student;
+import com.jdbc.util.DatabaseTools;
+
+public class StudentDao {
+	public static void insert(Student student) {
+		Connection connection = null;
+		Statement statement = null;
+		
+		connection = DatabaseTools.getConnection();
+		StringBuilder sqlStringBuilder = new StringBuilder();
+		
+		sqlStringBuilder.append("INSERT INTO student VALUE (NULL, '" + student.getStuName() + "', '" + student.getStuGender() + "');");
+		
+	}
+}
